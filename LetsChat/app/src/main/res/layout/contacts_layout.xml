@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/photo"
+        android:src="@drawable/profile_picture"
+        android:layout_margin="@dimen/margin_avg"/>
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Surname Name"
+        android:textSize="@dimen/_12sdp"
+        android:layout_toEndOf="@+id/photo"
+        android:layout_marginTop="@dimen/margin_avg"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/contact_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="85211112233"
+        android:textSize="@dimen/_9sdp"
+        android:layout_below="@+id/contact_name"
+        android:layout_toEndOf="@+id/photo"
+        android:textColor="@color/black"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/call"
+        android:src="@drawable/ic_call_black_24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_avg"
+        android:paddingTop="@dimen/padding_small"/>
+
+    <TextView
+        android:id="@+id/invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/call"
+        android:layout_toStartOf="@+id/call"
+        android:background="@drawable/invite_background"
+        android:paddingBottom="@dimen/_3sdp"
+        android:paddingEnd="@dimen/margin_avg"
+        android:paddingStart="@dimen/margin_avg"
+        android:paddingTop="@dimen/_3sdp"
+        android:text="Invite"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/padding_small"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/line_divider"
+        android:paddingStart="@dimen/margin_avg"
+        android:paddingEnd="@dimen/margin_avg"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="60dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_by_email"
+        android:text="Add by email"
+        android:textColor="@color/black"
+        android:padding="@dimen/padding_avg"
+        android:textSize="@dimen/_12sdp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/line_divider"
+        android:paddingStart="@dimen/margin_avg"
+        android:paddingEnd="@dimen/margin_avg"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_by_contact"
+        android:text="Add by contact/phone number"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:padding="@dimen/padding_avg"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/line_divider"
+        android:paddingStart="@dimen/margin_avg"
+        android:paddingEnd="@dimen/margin_avg"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_by_username"
+        android:text="Add by username"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:padding="@dimen/padding_avg"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/line_divider"
+        android:paddingStart="@dimen/margin_avg"
+        android:paddingEnd="@dimen/margin_avg"/>
+
+</LinearLayout>

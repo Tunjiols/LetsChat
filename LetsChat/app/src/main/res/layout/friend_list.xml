@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_4sdp"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_picture_circleView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="@dimen/padding_small"
+        android:src="@drawable/profile_picture" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".7">
+
+        <TextView
+            android:id="@+id/friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/friend_status"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="friend name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/friend_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test@test.com"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_below="@+id/friend_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_9sdp" />
+
+        <TextView
+            android:id="@+id/friend_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test@test.com"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
+    </RelativeLayout>
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkbox"
+        android:checked="false"/>
+
+</LinearLayout>

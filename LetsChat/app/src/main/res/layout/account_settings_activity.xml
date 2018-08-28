@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    tools:context="com.projects.adetunji.letschat.uis.activities.AccountSettingsActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay" >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/teal_400"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/margin_big"
+    android:padding="@dimen/margin_avg">
+
+    <TextView
+        android:id="@+id/privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_avg"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:text="Privacy"  />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/line_divider"
+        android:paddingStart="@dimen/margin_avg"
+        android:paddingEnd="@dimen/margin_avg"/>
+
+
+    <TextView
+        android:id="@+id/security"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_avg"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:text="Security" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/line_divider"
+        android:paddingStart="@dimen/margin_avg"
+        android:paddingEnd="@dimen/margin_avg"/>
+
+
+    <TextView
+        android:id="@+id/two_steps_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_avg"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:text="Two steps verifications"  />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/line_divider"
+        android:paddingStart="@dimen/margin_avg"
+        android:paddingEnd="@dimen/margin_avg"/>
+
+
+    <TextView
+        android:id="@+id/delete_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sdp"
+        android:padding="@dimen/padding_avg"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:text="Delete account"  />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/line_divider"
+        android:paddingStart="@dimen/margin_avg"
+        android:paddingEnd="@dimen/margin_avg"/>
+
+
+</LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout >

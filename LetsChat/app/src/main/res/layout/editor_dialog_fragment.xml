@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/padding_small"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_layout"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_rect_bg">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="Add by email"
+            android:padding="@dimen/padding_avg"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_text"
+            android:hint="enter email to search database"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_avg"
+            android:background="@drawable/bottom_border"
+            android:layout_marginStart="@dimen/padding_avg"
+            android:layout_marginEnd="@dimen/padding_avg"
+            android:focusable="true"
+            android:imeOptions="actionSearch"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/action_search"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_avg"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:padding="@dimen/padding_small"
+            android:src="@drawable/ic_search_black_24dp"
+            android:background="@color/teal_100"/>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigate_change_profile_pic"
+            android:icon="@drawable/ic_insert_photo_black_24dp"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/navigate_Favourite"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Favourite" />
+        <item
+            android:id="@+id/navigate_new_group"
+            android:icon="@drawable/ic_supervisor_account_black_24dp"
+            android:title="New group" />
+        <item
+            android:id="@+id/navigate_addFriends"
+            android:icon="@drawable/ic_add_black_24dp"
+            android:title="Add friends" />
+        <item
+            android:id="@+id/navigate_letschat"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Share LetsChat" />
+
+        <item
+            android:id="@+id/navigate_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/action_settings" />
+    </group>
+
+    <item android:title="">
+        <menu>
+
+            <item
+                android:id="@+id/navigate_logout"
+                android:title="@string/action_logout"
+                />
+
+        </menu>
+    </item>
+
+
+
+</menu>

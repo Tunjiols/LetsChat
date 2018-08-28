@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:id="@+id/message_dialog_linearlayout"
+        android:background="@drawable/forward_mine_dialog_background"
+        android:orientation="horizontal"
+        android:visibility="visible"
+    android:paddingEnd="@dimen/margin_small"
+    android:paddingStart="@dimen/margin_small">
+
+        <TextView
+            android:id="@+id/forward_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Forward"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <TextView
+            android:id="@+id/copy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Copy"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <TextView
+            android:id="@+id/delete_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+</LinearLayout>

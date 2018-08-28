@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.projects.adetunji.letschat">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.projects.adetunji.letschat.LetsChatMainApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_lets_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+
+        android:theme="@style/AppTheme">
+
+
+
+        <activity android:name=".uis.activities.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.ProfilesActivity"
+            android:parentActivityName=".uis.activities.UserListingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.RegisterActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.UserListingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable">
+             </meta-data>
+        </activity>
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.ChatActivity"
+            android:parentActivityName=".uis.activities.UserListingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+        />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.EditProfileActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+        </activity>
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.GeneralActivity"
+            android:parentActivityName=".uis.activities.UserListingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.NotificationsSettingsActivity"
+            android:parentActivityName=".uis.activities.UserListingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.AccountSettingsActivity"
+            android:parentActivityName=".uis.activities.UserListingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.ChatSettingsActivity"
+            android:parentActivityName=".uis.activities.UserListingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.AboutUsSettingsActivity"
+            android:parentActivityName=".uis.activities.UserListingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.HelpSettingsActivity"
+            android:parentActivityName=".uis.activities.UserListingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.StatusSettingsActivity"
+            android:parentActivityName=".uis.activities.UserListingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.FriendDetailsActivity"
+            android:parentActivityName=".uis.activities.ChatActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.UpdateProfileActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.FriendListActivity"
+            android:parentActivityName=".uis.activities.GeneralActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.AppInformationActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name="com.projects.adetunji.letschat.uis.activities.WallpaperActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".uis.activities.UserListingActivity" />
+
+
+        <service android:name="com.projects.adetunji.letschat.fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+
+            </intent-filter>
+
+        </service>
+
+        <service android:name="com.projects.adetunji.letschat.fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+
+            </meta-data>
+        </provider>
+
+    </application>
+
+</manifest>

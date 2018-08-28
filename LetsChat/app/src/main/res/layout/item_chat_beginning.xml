@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="55dp"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_begin"
+        android:text="Start chatting with your friend"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9sdp"
+        android:padding="@dimen/padding_big"
+        android:background="@drawable/rounded_rect_bg"
+        android:layout_margin="@dimen/padding_small"/>
+
+</RelativeLayout>

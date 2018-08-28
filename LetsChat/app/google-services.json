@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1053646276383",
+    "firebase_url": "https://fir-database-2d73b.firebaseio.com",
+    "project_id": "fir-database-2d73b",
+    "storage_bucket": "fir-database-2d73b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053646276383:android:66a24786184230f3",
+        "android_client_info": {
+          "package_name": "com.projects.adetunji.letschat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053646276383-e6nl6lurs05v2mmqq4gs45b89ntpoj88.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDDVayt9UkXjvFceVGe81A2s8FN7a_6dQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
