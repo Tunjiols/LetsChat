@@ -90,6 +90,42 @@ public class GetUsersInteractor implements GetUsersContract.Interactor{
         });
 
     }
+    
+    private void observableGetUsers(DataSnapshot dataSnapshot){
+        Observable<DataSnapshot> observeData = Observable.create(new Observable.OnSubscribe<DataSnapshot>() { 
+            @Override
+            public void call(Subscriber<? super DataSnapshot> subscriber) {
+                if (!subscriber.isUnsubscribed()) { 
+                    try{
+                        DataSnapshot datasnapshotChild = dataSnapshot.next(); 
+                        subscriber.onNext(datasnapshotChild); 
+                        subscriber.onCompleted(); //5
+                    } catch (Exception e) {
+                        subscriber.onError(e); //6
+                    }
+                }
+            }
+        }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        
+        Subscriber<DataSnapshot> dataSubscriber = new Subscriber<DataSnapshot>() {
+            List<UserEntity> users = new ArrayList<>();
+            @Override
+            public void onNext(DataSnapshot dataSnapshotChild) { 
+                user = dataSnapshotChild.getValue(UserEntity.class);
+                if (!TextUtils.equals(user.Email, FirebaseAuth.getInstance().getCurrentUser().getEmail())) {
+                    users.add(user);
+                }
+            }
+
+            @Override
+            public void onCompleted() { }
+
+            @Override
+            public void onError(Throwable e) { }
+        };
+        
+        observeData.subscribe(dataSubscriber);
+    }
 /*
     public List<UserEntity> getUserData(){
 
