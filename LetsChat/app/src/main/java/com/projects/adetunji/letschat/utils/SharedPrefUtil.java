@@ -9,7 +9,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.projects.adetunji.letschat.LetsChatMainApp;
 
 /**
- * Created by adetunji on 07/01/2018.
+ * Created by adetunji on 07/01/2018. class SharedPrefUtil
  */
 
 public class SharedPrefUtil {

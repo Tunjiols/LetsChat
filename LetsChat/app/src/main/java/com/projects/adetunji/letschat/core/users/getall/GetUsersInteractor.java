@@ -15,6 +15,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import rx.Observable;
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+
 /**
  * Created by adetunji on 07/01/2018.
  *
@@ -29,10 +34,10 @@ public class GetUsersInteractor implements GetUsersContract.Interactor{
     public List<UserEntity> loginUser;
 
 
-    private GetUsersContract.OnGetAllUsersListener appOnGetAllUsersListener;
+    private GetUsersContract.OnGetAllUsersListener mOnGetAllUsersListener;
 
     public GetUsersInteractor(GetUsersContract.OnGetAllUsersListener onGetAllUsersListener) {
-        this.appOnGetAllUsersListener = onGetAllUsersListener;
+        this.mOnGetAllUsersListener = onGetAllUsersListener;
     }
 
 
@@ -57,12 +62,12 @@ public class GetUsersInteractor implements GetUsersContract.Interactor{
                         loginUser.add(user);//Get profile of login user
                     }
                 }
-                appOnGetAllUsersListener.onGetAllUsersSuccess(users);
+                mOnGetAllUsersListener.onGetAllUsersSuccess(users);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                appOnGetAllUsersListener.onGetAllUsersFailure(databaseError.getMessage());
+                mOnGetAllUsersListener.onGetAllUsersFailure(databaseError.getMessage());
             }
         });
     }
@@ -91,24 +96,24 @@ public class GetUsersInteractor implements GetUsersContract.Interactor{
 
     }
     
-    private void observableGetUsers(DataSnapshot dataSnapshot){
-        Observable<DataSnapshot> observeData = Observable.create(new Observable.OnSubscribe<DataSnapshot>() { 
+    private void observableGetUsers(final DataSnapshot dataSnapshot){
+        Observable<DataSnapshot> observeData = Observable.create(new Observable.OnSubscribe<DataSnapshot>() {
             @Override
             public void call(Subscriber<? super DataSnapshot> subscriber) {
                 if (!subscriber.isUnsubscribed()) { 
                     try{
-                        DataSnapshot datasnapshotChild = dataSnapshot.next(); 
-                        subscriber.onNext(datasnapshotChild); 
-                        subscriber.onCompleted(); //5
+                        //DataSnapshot datasnapshotChild = dataSnapshot;
+                        subscriber.onNext(dataSnapshot);
+                        subscriber.onCompleted();
                     } catch (Exception e) {
-                        subscriber.onError(e); //6
+                        subscriber.onError(e);
                     }
                 }
             }
         }).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
-        
+
+        final List<UserEntity> users = new ArrayList<>();
         Subscriber<DataSnapshot> dataSubscriber = new Subscriber<DataSnapshot>() {
-            List<UserEntity> users = new ArrayList<>();
             @Override
             public void onNext(DataSnapshot dataSnapshotChild) { 
                 user = dataSnapshotChild.getValue(UserEntity.class);
@@ -125,6 +130,7 @@ public class GetUsersInteractor implements GetUsersContract.Interactor{
         };
         
         observeData.subscribe(dataSubscriber);
+        mOnGetAllUsersListener.onGetAllUsersSuccess(users);
     }
 /*
     public List<UserEntity> getUserData(){
